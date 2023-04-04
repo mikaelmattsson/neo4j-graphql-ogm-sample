@@ -1,0 +1,5 @@
+node_modules
+src/generated/*.ts
+dist
+.eslintrc.js
+tsconfig.json

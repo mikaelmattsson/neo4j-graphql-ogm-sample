@@ -1,0 +1,14 @@
+type Actor
+@auth(rules: [
+    { operations: [READ, CREATE, UPDATE, DELETE, CONNECT, DISCONNECT], roles: ["admin"] }
+    { operations: [READ], roles: ["user"] }
+])
+{
+    id: ID!
+    @id
+
+    name: String!
+
+    movies: [Movie!]!
+    @relationship(type: "ACTS_IN", direction: OUT)
+}
